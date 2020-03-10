@@ -102,7 +102,7 @@ class FlowControl {
                 - continue: 가장 가깝게 둘러싼 루프의 다음 단계 진행
             - 위의 세가지 모두 더 큰식의 일부로 사용할 수 있음
         */
-        val person = Person(null)
+        val person = Animal(null)
         val s = person.name?: return
 
         /*
@@ -147,4 +147,4 @@ fun retrieveData(x: Int) : Int? {
     return 1
 }
 
-class Person(val name: String?)
+class Animal(val name: String?)
