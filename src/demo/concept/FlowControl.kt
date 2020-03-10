@@ -141,7 +141,7 @@ class FlowControl {
 }
 
 fun retrieveData(x: Int) : Int? {
-    if (x === 1) {
+    if (x == 1) {
         return null
     }
     return 1

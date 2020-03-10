@@ -79,14 +79,14 @@ class Bar4 : Foo3() {
 }
 
 // 내부 클래스는 super@Outer와 같이 외부 클래스의 이름을 사용해서 외부클래스의 상위 클래스에 접근 가능
-class Bar4 : Foo3() {
+class Bar5 : Foo3() {
     override fun f() {}
     override val x: Int get() = 0
 
     inner class Baz {
         fun g() {
-            super@Bar4.f() //Foo3의 f의 구현
-            println(super@Bar4.x)
+            super@Bar5.f() //Foo3의 f의 구현
+            println(super@Bar5.x)
         }
     }
 }
