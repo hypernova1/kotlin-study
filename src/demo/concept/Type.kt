@@ -78,13 +78,73 @@ class Type {
         val x = (1 shl 2) and 0x000FF000
     }
 
-    fun text() {
-        /*
-            문자
-        */
-        val c: Char = 'a'
-//        if (c == 1) {} // 비교 불가
+    fun compare() {
 
+        /*
+            부동소수 비교
+                - 동등 비교: a == b
+                - 비교 연산자: a < b, a <= b
+                - 범위 생성과 검사 a..b, x in a..b, x !in a..b
+        */
+
+        /*
+            문자 비교
+        */
+        val c: Char = '1'
+//      if (c == 1) {} // 비교 불가
+//      if (c.toInt() === 1) //OK
+
+        /*
+            불리언 비교
+                - ||: 지연 논리합
+                - &&: 지연 논리곱
+                - !: 역
+        */
+    }
+
+    fun array() {
+        /*
+            배열 생성 방법
+        */
+        // 팩토리 함수
+        val asc = Array(5) { i -> (i * i).toString() }
+
+        // 기본 타입 배열 클래스 (ByteArray , ShortArray , IntArray 등)
+        val x: IntArray = intArrayOf(1, 2, 3)
+        x[0] = x[1] + x[2]
+    }
+
+    fun string() {
+        /*
+            문자열은 String 타입으로 표현
+            문자열은 불변
+            인덱스로 접근 가능 -> s[i]
+        */
+        val str = "abc"
+        for (c in str) {
+            println(c)
+        }
+
+        /*
+            문자열 리터럴
+        */
+        val s = "Hello, world!\n"
+
+        // raw 문자열 """
+        val text = """
+            for (c in "foo")
+                print(c)
+        """.trimMargin() // trimMargin 함수를 통해 앞쪽 공객 제거 가능
+
+        /*
+            문자열 템플릿
+        */
+        val intStr = 10
+        val strTpl = "i = $i"
+
+        val price = """
+            ${'S'}9.99
+        """.trimIndent()
     }
 
 }
