@@ -1,5 +1,6 @@
 package demo
 
+import demo.concept.FlowControl
 import demo.concept.Type
 
 fun main() {
@@ -16,11 +17,20 @@ fun main() {
     warmingUp.ranges() //범위
 
     val concept1 = Type()
-    concept.literal()
-    concept.autoBoxing()
-    concept.casting()
-    concept.calculate()
-    concept.compare()
+    concept1.literal()
+    concept1.autoBoxing()
+    concept1.casting()
+    concept1.calculate()
+    concept1.compare()
+
+    val concept2 = FlowControl()
+    concept2.ifStatement(1, 2)
+    concept2.whenStatement(1)
+    concept2.forLoop()
+    concept2.whileLoop()
+    concept2.breakAndContinue()
+
+
 }
 
 

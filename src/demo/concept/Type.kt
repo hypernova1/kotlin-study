@@ -140,7 +140,7 @@ class Type {
             문자열 템플릿
         */
         val intStr = 10
-        val strTpl = "i = $i"
+        val strTpl = "i = $intStr"
 
         val price = """
             ${'S'}9.99
