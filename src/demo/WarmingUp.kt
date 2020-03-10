@@ -1,12 +1,14 @@
 package demo
 
-class Concept {
+class WarmingUp {
 
-    fun run() {
+    fun defineFunc() {
         println(sum(1, 2))
         println(sum2(1, 3))
         printSum(2, 3)
+    }
 
+    fun defineVal() {
         // val: 불변
         val a: Int = 1
         val b = 2
@@ -18,28 +20,34 @@ class Concept {
         // var: 가변
         var x = 1
         x += 3
+    }
 
-        /*
-            문자 템플릿 사용
-        */
+    fun stringTemplate() {
         var intVal = 0;
         var str = "intVal is $intVal"
 
         // 임의의 식 사용
         var intVal2 = 2;
         var str2 = "${str.replace("is", "was")}, but not is $intVal2"
+    }
 
-
+    fun conditionalExp() {
         /*
-            조건식 사용
+            if문 사용
         */
         maxOf(1, 2)
         maxOf2(2, 1)
 
-
         /*
-            for 루프
+            when 식 사용
         */
+        describe(1)
+    }
+
+    fun loop() {
+        /*
+           for 루프
+       */
         var items = listOf("apple", "banana", "kiwi")
         for (item in items) {
             println(item)
@@ -57,12 +65,9 @@ class Concept {
             println("item at $index is ${items[index]}")
             index++
         }
+    }
 
-        /*
-            when 식 사용
-        */
-        describe(1)
-
+    fun ranges() {
         /*
             범위 사용 (in)
         */
@@ -79,7 +84,6 @@ class Concept {
         if (list.size !in list.indices) {
             println("list size is out of valid list indices range too")
         }
-
     }
 
 }
@@ -96,6 +100,8 @@ fun printSum(a: Int, b: Int)/*: Unit //생략 가능 */ {
     println("sum of $a and $b is ${a + b}")
 }
 
+
+
 // 조건식 사용
 fun maxOf(a: Int, b: Int): Int {
     if (a > b) {
@@ -106,6 +112,8 @@ fun maxOf(a: Int, b: Int): Int {
 }
 // if를 식으로 사용
 fun maxOf2(a: Int, b: Int) = if (a > b) a else b
+
+
 
 // null 가능 값 사용 과 null 검사
 fun parseInt(str: String): Int? {

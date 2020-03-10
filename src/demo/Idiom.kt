@@ -4,8 +4,8 @@ class Idiom {
 
     fun run() {
         /*
-        함수 파라미터 기본값
-    */
+            함수 파라미터 기본값
+        */
         foo()
         foo(3)
 
